@@ -1,8 +1,11 @@
-## Hi! I'm Julia
+# Hi! I'm Julia!
 
-### Markdown
+I'm an 18 year old college sophomore, attending Smith College. I'm majoring in Computer Science and minoring in Engineering.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Projects, I guess?
+
+I took Data Structures last year, and my final project is called [PokeStats](https://github.com/JuliaYu2002/PokeStats).
+
 
 ```markdown
 Syntax highlighted code block
@@ -21,13 +24,3 @@ Syntax highlighted code block
 
 [Link](url) and ![Image](src)
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JuliaYu2002/juliayu2002.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
