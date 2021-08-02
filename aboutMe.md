@@ -1,7 +1,5 @@
 ---
-layout: page
-title: "testing"
-permalink: /about_test/
+permalink: /about/
 ---
 
 uh hi?
