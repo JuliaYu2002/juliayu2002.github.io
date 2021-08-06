@@ -1,6 +1,6 @@
 # Hi! I'm Julia!
 
-I'm an 18 year old college sophomore, attending Smith College. I'm majoring in Computer Science and minoring in Engineering.
+I'm passionate about learning and I'm looking for more opprotunities to broaden my horizons!
 
 ### Projects, I guess?
 
