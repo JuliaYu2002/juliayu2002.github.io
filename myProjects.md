@@ -19,3 +19,5 @@ I'm currently trying to work on learning PyGame and make my own simple escaperoo
 [About Me](https://juliayu2002.github.io/about)
 
 [Things I'm Interested in](https://juliayu2002.github.io/interests)
+
+[Activities I've Completed](https://juliayu2002.github.io/completedActivites)
