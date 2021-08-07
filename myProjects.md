@@ -1,5 +1,9 @@
 ---
 permalink: /projects/
+
+[About Me](https://juliayu2002.github.io/about)
+
+[My Projects](https://juliayu2002.github.io/projects)
 ---
 
 # Projects, I guess?
