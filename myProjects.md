@@ -17,3 +17,5 @@ I'm currently trying to work on learning PyGame and make my own simple escaperoo
 [Home](https://juliayu2002.github.io/)
 
 [About Me](https://juliayu2002.github.io/about)
+
+[Things I'm Interested in](https://juliayu2002.github.io/interests)
