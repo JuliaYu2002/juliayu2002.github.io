@@ -15,3 +15,5 @@ As stated above, yep. I attend Smith College, located in Northampton, MA. I grad
 [Home](https://juliayu2002.github.io/)
 
 [My Projects](https://juliayu2002.github.io/projects)
+
+[Things I'm Interested in](https://juliayu2002.github.io/interests)
