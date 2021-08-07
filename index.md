@@ -22,5 +22,3 @@ I also like robots and the AI that moves robots autonomously. I have a small rob
 [My Projects](https://juliayu2002.github.io/projects)
 
 [Things I'm Interested in](https://juliayu2002.github.io/interests)
-
-[Activities I've Completed](https://juliayu2002.github.io/completedActivites)
