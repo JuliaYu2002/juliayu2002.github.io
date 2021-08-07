@@ -2,6 +2,10 @@
 permalink: /about/
 ---
 
+[Home](https://juliayu2002.github.io/)
+
+[About Me](https://juliayu2002.github.io/about)
+
 # Who am I?
 
 (That **is** a good question... Who am I in this world?)
