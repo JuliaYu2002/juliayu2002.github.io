@@ -1,17 +1,2 @@
 theme: jekyll-theme-hacker
 title: Joy in Chibi
-
-docs_list_title: joyful_pages
-docs:
-
-- title: Home
-  url: index.md
-
-- title: About Me
-  url: about.md
-
-- title: Projects
-  url: projects.md
-
-- title: Interests
-  url: interests.md
