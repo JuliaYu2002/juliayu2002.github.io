@@ -1,3 +1,13 @@
+---
+permalink: /home/
+<h2>{{ site.data.samplelist.joy's pages }}</h2>
+<ul>
+   {% for item in site.data.samplelist.docs %}
+      <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+   {% endfor %}
+</ul>
+---
+
 # Hi! I'm Julia!
 
 I'm passionate about learning and I'm looking for more opprotunities to broaden my horizons!
