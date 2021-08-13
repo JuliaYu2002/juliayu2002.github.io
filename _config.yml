@@ -1,2 +1,17 @@
 theme: jekyll-theme-hacker
 title: Joy in Chibi
+
+docs_list_title: joy's pages
+docs:
+
+- title: Home
+  url: home
+
+- title: About Me
+  url: about
+
+- title: Projects
+  url: projects
+
+- title: Interests
+  url: interests
