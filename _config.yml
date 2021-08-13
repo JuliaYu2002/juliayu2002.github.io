@@ -8,10 +8,10 @@ docs:
   url: index.md
 
 - title: About Me
-  url: about
+  url: about.md
 
 - title: Projects
-  url: projects
+  url: projects.md
 
 - title: Interests
-  url: interests
+  url: interests.md
