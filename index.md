@@ -1,5 +1,4 @@
 ---
-permalink: /home/
 <h2>{{ site.data.samplelist.joy's pages }}</h2>
 <ul>
    {% for item in site.data.samplelist.docs %}
