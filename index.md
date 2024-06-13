@@ -3,18 +3,9 @@
 
 # Hi! I'm Julia!
 
-I'm passionate about learning and I'm looking for more opprotunities to broaden my horizons!
+I'm passionate about learning and I'm looking for more opprotunities to broaden my horizons! I'll be attending Cornell Tech for a MEng in Electrical and Computer Engineering for the coming academic year.
 
-### My Interests?
-
-I enjoy playing video games on my Switch very much, as well as my 3DS.
-Games I like include:
-- Pokemon as a whole
-- Farming simulators such as Story of Seasons, Stardew Valley, and Rune Factory
-- Splatoon 2
-- Genshin Impact
-- Monster Hunter Stories 2 Wings of Ruin
-- The Etrian Odyssey series
+### Interests
 
 I like coding? I've gone with C++ for just under a year, and then I switched to Java and I have about a year in that. I also have experience in Python and JavaScript, but they aren't my first choice to code in.
 
