@@ -13,7 +13,8 @@
   <body>
 
     <header>
-      <div class="container">
+      <div class = "container">
+        {% assign pages = site.pages %}
         <a id="a-title" href="{{ '/' | relative_url }}">
           <h1>{{ site.title | default: site.github.repository_name }}</h1>
         </a>
@@ -21,7 +22,6 @@
 
         <section id="navbar">
           {% for page in pages %}
-          <p>{{ page.url }} {{ page.title }}</p>
             <a href="{{ page.url }}" class = "btn">{{ page.title }}</a>
           {% endfor %}
             <!-- <a href="{{ '/about' | relative_url }}" class="btn">About Me</a>
