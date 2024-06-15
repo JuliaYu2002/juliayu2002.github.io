@@ -13,4 +13,4 @@ I have CAD experience using SolidWorks and Fusion 360. I've also used a lathe to
 
 # Coding
 
-I find it hard to learn spoken and written languages, so I'm interested in learning a lot of different coding languages so I can same that I'm an omniglot (this is a joke, but I'm serious about wanting to learn a lot of coding languages).
+I find it hard to learn spoken and written languages, so I'm interested in learning a lot of different coding languages so I can say that I'm an omniglot (this is a joke, but I'm serious about wanting to learn a lot of coding languages).
