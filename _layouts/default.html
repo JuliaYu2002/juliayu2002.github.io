@@ -20,7 +20,7 @@
         
         <section id="navbar">
           {% assign pages = site.pages | where_exp: 'page', 'page.title' %}
-          <p>pages</p>
+          <p>{{ pages }}</p>
           {% for page in pages %}
             {% if page.title != "Home" %}
               <a href = "{{ page.url }}" class = "btn">{{ page.title }}</a>
