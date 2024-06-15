@@ -21,7 +21,7 @@
 
         <section id="navbar">
           {% for page in pages %}
-            <a href="{{ page.url }}">{{ page.title }}</a>
+            <a href="{{ page.url }}" class = "btn">{{ page.title }}</a>
           {% endfor %}
             <!-- <a href="{{ '/about' | relative_url }}" class="btn">About Me</a>
             <a href="{{ '/projects' | relative_url }}" class="btn">Projects I've contributed to</a> -->
