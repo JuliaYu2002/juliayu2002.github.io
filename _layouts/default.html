@@ -20,8 +20,11 @@
         <h2>{{ site.description | default: site.github.project_tagline }}</h2>
 
         <section id="navbar">
-            <a href="{{ '/about' | relative_url }}" class="btn">About Me</a>
-            <a href="{{ '/projects' | relative_url }}" class="btn">Projects I've contributed to</a>
+          {% for page in pages %}
+            <a href="{{ page.url }}">{{ page.title }}</a>
+          {% endfor %}
+            <!-- <a href="{{ '/about' | relative_url }}" class="btn">About Me</a>
+            <a href="{{ '/projects' | relative_url }}" class="btn">Projects I've contributed to</a> -->
           <!-- <a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View on GitHub</a> -->
         </section>
       </div>
