@@ -1,5 +1,6 @@
 ---
 permalink: /projects/
+title: Projects I've Contributed to
 ---
 
 # Projects, I guess?

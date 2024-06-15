@@ -1,5 +1,6 @@
 ---
 permalink: /about/
+title: About Me
 ---
 
 # Who am I?
