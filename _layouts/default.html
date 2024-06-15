@@ -12,7 +12,7 @@
 
   <body>
     <header>
-      <div class = "heading">
+      <div class = "container">
         {% assign pages = site.pages | where_exp: 'page', 'page.title' %}
         <a id = "a-title" href = "{{ '/' | relative_url }}">
           <h1>{{ site.title | default: site.github.repository_name }}</h1>
@@ -27,7 +27,7 @@
       </div>
     </header>
 
-    <div class = "content container">
+    <div class = "container">
       <section id = "main_content">
         {{ content }}
       </section>
