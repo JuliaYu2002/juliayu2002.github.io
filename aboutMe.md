@@ -12,9 +12,3 @@ I'm a New Yorker, born and raised. I recently graduated Smith College with a Bac
 ### Where I've Been (Education-wise)
 
 As stated above, I attended Smith College (Northampton, MA). I graduated high school in 2020 from Manhattan Hunter Science High School in NYC. I had the privilage of having dual enrollment with CUNY Hunter College during my senior year, which was why I was able to skip straight to Data Structures my first semester at Smith.
-
-[Home](https://juliayu2002.github.io/)
-
-[My Projects](https://juliayu2002.github.io/projects)
-
-[Things I'm Interested in](https://juliayu2002.github.io/interests)
