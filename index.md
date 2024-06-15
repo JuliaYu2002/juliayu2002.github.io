@@ -1,4 +1,5 @@
 ---
+title: Home
 ---
 
 # Hi! I'm Julia!
