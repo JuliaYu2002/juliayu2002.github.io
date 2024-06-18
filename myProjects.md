@@ -7,7 +7,7 @@ title: Projects I've Contributed to
 
 [Robot System Integration - Hexapod](https://github.com/smith-scram-lab/Mr.Krab), a special studies project over Spring 2024 which consisted of testing and evaluating Dynamixel servos used by a Hexapod, and analyzing and creating an easier way to interface and program said servos. I worked under Professor Kevin Huang at Smith College for this project.
 
-[R Weather Package](https://github.com/JuliaYu2002/weather), a package usable in RStudio made for *Programming for Data Science in R* with 2 others. Made Spring 2024. It enables the user to plot forcast weather data scraped from The Weather Channel for Northampton, MA as well as past weather data from another source. I specifically covered web scraping for the forcast data and cleaned it to be in a easier to read data frame.
+[R Weather Package](https://github.com/JuliaYu2002/weather), a package usable in RStudio made for *Programming for Data Science in R* with 2 others. Made Spring 2024. It enables the user to plot forecast weather data scraped from The Weather Channel for Northampton, MA as well as past weather data from another source. I specifically covered web scraping for the forcast data and cleaned it to be in a easier to read data frame.
 
 [Misty Robot Investigation](https://github.com/SWorster/MistySURF2023), a repository of code usable with the robot Misty by Furhat Robotics created by myself and one other person over Summer 2023 as a research project for Professor Ileana Streinu. I focused on hardware and made a physical controller for Misty using an Arduino Nano and a Bluetooth module to connect to a computer which would send commands to the robot.
 

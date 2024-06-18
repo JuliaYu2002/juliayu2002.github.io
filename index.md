@@ -4,6 +4,6 @@ title: Home
 
 # Hi! I'm Julia!
 
-Aspiring Software Developer, player of video games, and all around tired person.
+Aspiring Software Developer and player of video games. I also can be considered a neurodivergent nerd.
 
 Eventually there will be a picture of me here.
