@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julia Yu - Developer Adventure</title>
+    <link rel="stylesheet" href="portfolio_styles.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <div class="stars"></div>
+
+        <div class="hud">
+            <div>🚀 Developer Explorer</div>
+            <div>Health: ████████████</div>
+            <div>Level: Full Stack</div>
+        </div>
+
+        <div class="instructions">
+            WASD or Arrow Keys to move the rocket • Space/Enter when hovering over zone or click to view content
+        </div>
+
+        <div class="player"></div>
+
+        <div class="zone skills-zone" data-modal="skills">
+            <h3>💻 SKILLS HUB</h3>
+            <p>Discover my technical abilities and programming languages</p>
+        </div>
+
+        <div class="zone projects-zone" data-modal="projects">
+            <h3>🚀 PROJECTS LAB</h3>
+            <p>Explore my latest creations</p>
+        </div>
+
+        <div class="zone about-zone" data-modal="about">
+            <h3>👨‍💻 MISSION CONTROL</h3>
+            <p>Learn about my journey and mission as a developer</p>
+        </div>
+
+        <div class="zone experience-zone" data-modal="experience">
+            <h3>⚡ EXPERIENCE VAULT</h3>
+            <p>Journey through my professional achievements</p>
+        </div>
+
+        <div class="zone contact-zone" data-modal="contact">
+            <h3>📡 COMMUNICATION</h3>
+            <p>Connect with me across the digital universe</p>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="skills" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>💻 Skills & Technologies</h2>
+            <div class="skill-grid">
+                <div class="skill-item">
+                    <h4>Languages</h4>
+                    <p>Python, C#, C++, Java, R</p>
+                </div>
+                <div class="skill-item">
+                    <h4>DevOps</h4>
+                    <p>Git, Linux, Jira, Docker</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Web</h4>
+                    <p>HTML5, CSS3, JavaScript, Ruby on Rails</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Prototyping</h4>
+                    <p>Blender, TinkerCAD, Fusion360, Arduino, Raspberry Pi</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Other</h4>
+                    <p>Unity, Oculus, ROS2, Three.js</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>🚀 Featured Projects</h2>
+            <div class="project-card">
+                <a href="https://docs.google.com/presentation/d/1cNIRqvXtoTJpRi4dXVr3nqQ2HxPUUbk6FyrMRXO0jyE/edit?usp=sharing" target="_blank">
+                    <h3>Sweep & Set Independent Study Project</h3>
+                </a>
+                <br>
+                <p>Using Unity and an Oculus Quest 3, I created an AR experience that can interface with ROS controlled Dynamixel motors. The user can make sweeping gestures with their right hand and select motors with their left hand. The motors will move
+                    in the direction of the gesture and stop when the user releases the gesture.</p>
+                <p><strong>Tech: </strong>Oculus Quest 3, Unity, ROS2, Dynamixel motors, C#</p>
+            </div>
+            <div class="project-card">
+                <a href="https://drive.google.com/file/d/12TGBZhQhGVrMr3-f1Uwo-SNLuK_q4who/view?usp=sharing" target="_blank">
+                    <h3>Gravity Sketch Class Project Implementation</h3>
+                </a>
+                <br>
+                <p>With a group of 3 other students, we created a recreation of the application Gravity Sketch for the Meta Quest. Includes features like snap back, color changing, and more.</p>
+                <p><strong>Tech: </strong>Unity, Oculus Quest 2, Gravity Sketch application</p>
+            </div>
+            <div class="project-card">
+                <h3></h3>
+                <p>
+                </p>
+                <p><strong>Tech: </strong></p>
+            </div>
+            <div class="project-card">
+                <h3></h3>
+                <p>
+                </p>
+                <p><strong>Tech: </strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>👨‍💻 About Me</h2>
+            <p>Hello! I'm a passionate developer with an ideal in creating new technology, whether code or actual hardware, using my own hands to make an impact on the world.</p>
+            <p>It began with click-and-drag code blocks in Scratch, to a robot project in a summer camp during middle school, to a dip into the ocean that is Unity, to robots in college, and now I'm here.</p>
+            <p>When I'm not coding, I'll be playing video games or drawing characters that float through my mindscape.
+            </p>
+            <p><strong>Current Focus: </strong>Learning about the game development pipeline and looking for my first job.
+            </p>
+            <p><strong>Philosophy: </strong>You might be free from academia, but you're never free from learning.</p>
+        </div>
+    </div>
+
+    <div id="experience" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>⚡ Professional Experience</h2>
+            <div class="project-card">
+                <h3>Cornell Tech MEng in Electrical and Computer Engineering</h3>
+                <p><strong>Tech Innovations Inc.</strong> | August 2024 - May 2025</p>
+                <p>Lead development of enterprise web applications serving 100K+ users. Architected microservices infrastructure and mentored junior developers.</p>
+                <p><strong>Achievements:</strong> Reduced load times by 60%, implemented CI/CD pipeline, increased team productivity by 40%</p>
+            </div>
+            <div class="project-card">
+                <h3>Smith College A.B in Computer Science</h3>
+                <p><strong>Digital Solutions Co.</strong> | September 2020 - May 2024</p>
+                <p>Developed responsive web applications using React and Vue.js. Collaborated with UX/UI designers to create pixel-perfect implementations.</p>
+                <p><strong>Achievements:</strong> Built 15+ responsive websites, improved accessibility scores to 95+, reduced bug reports by 50%</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>📡 Let's Connect</h2>
+            <p>Want to reach out? I'm always happy to connect with fellow developers and innovators!</p>
+            <div class="skill-grid">
+                <div class="skill-item">
+                    <h4>📧 Email</h4>
+                    <p>juliaoliviayu@gmail.com</p>
+                </div>
+                <div class="skill-item">
+                    <h4>💼 LinkedIn</h4>
+                    <p>linkedin.com/in/juliayu2002</p>
+                </div>
+                <div class="skill-item">
+                    <h4>🐙 GitHub</h4>
+                    <p>github.com/juliayu2002</p>
+                </div>
+                <div class="skill-item">
+                    <h4>👾 Discord</h4>
+                    <p>jubileejulivee</p>
+                </div>
+            </div>
+            <p style="margin-top: 20px; text-align: center;">💡 <em>Open to learning opportunities, full-time
+                    opportunities, and exciting collaborations!</em></p>
+        </div>
+    </div>
+
+    <script src="portfolio_script.js"></script>
+</body>
+
+</html>

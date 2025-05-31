@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P:wght@400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', monospace;
+    background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460);
+    min-height: 100vh;
+    overflow-x: hidden;
+    cursor: crosshair;
+    /* Changed from transparent to visible cursor */
+}
+
+.game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.player {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.7);
+}
+
+.player::before {
+    content: '🚀';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+.zone {
+    position: absolute;
+    border: 3px solid;
+    border-radius: 15px;
+    padding: 20px;
+    width: 310px;
+    height: 200px;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 5;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.zone:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+}
+
+.about-zone:hover {
+    transform: translate(-50%, -50%);
+    /* Keep it centered, no scaling */
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+}
+
+.skills-zone {
+    top: 15%;
+    left: 10%;
+    background: rgba(74, 144, 226, 0.2);
+    border-color: #4a90e2;
+    color: #87ceeb;
+}
+
+.projects-zone {
+    top: 15%;
+    right: 10%;
+    background: rgba(80, 227, 194, 0.2);
+    border-color: #50e3c2;
+    color: #7fffd4;
+}
+
+.experience-zone {
+    bottom: 20%;
+    left: 10%;
+    background: rgba(255, 107, 107, 0.2);
+    border-color: #ff6b6b;
+    color: #ffb3ba;
+}
+
+.contact-zone {
+    bottom: 20%;
+    right: 10%;
+    background: rgba(189, 147, 249, 0.2);
+    border-color: #bd93f9;
+    color: #dda0dd;
+}
+
+.about-zone {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 215, 0, 0.2);
+    border-color: #ffd700;
+    color: #ffffe0;
+}
+
+.zone h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+    word-wrap: break-word;
+    width: 100%;
+}
+
+.zone p {
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: center;
+    word-wrap: break-word;
+    width: 100%;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border: 3px solid #4a90e2;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+    color: white;
+    position: relative;
+    box-shadow: 0 0 50px rgba(74, 144, 226, 0.5);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #ff6b6b;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #ff8e8e;
+}
+
+.modal h2 {
+    color: #4a90e2;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.modal p,
+.modal li {
+    font-size: 10px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.skill-item {
+    background: rgba(74, 144, 226, 0.1);
+    border: 2px solid #4a90e2;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: fit-content;
+    min-width: max-content;
+    justify-self: center;
+}
+
+.skill-item:hover {
+    background: rgba(74, 144, 226, 0.2);
+}
+
+.skill-item h4 {
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+
+.skill-item p {
+    min-width: 100%;
+    word-wrap: break-word;
+}
+
+.project-card {
+    background: rgba(80, 227, 194, 0.1);
+    border: 2px solid #50e3c2;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.project-card a {
+    /* text-decoration: none; */
+    color: inherit;
+}
+
+.project-card:hover {
+    background: rgba(80, 227, 194, 0.2);
+    /* transform: translateX(10px); */
+}
+
+.hud {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #4a90e2;
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    font-size: 10px;
+    z-index: 50;
+    backdrop-filter: blur(10px);
+}
+
+.instructions {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+    padding: 15px;
+    color: #ffd700;
+    font-size: 10px;
+    text-align: center;
+    z-index: 50;
+    backdrop-filter: blur(10px);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #4a90e2;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .zone {
+        width: 150px;
+        height: 120px;
+        padding: 15px;
+    }
+    .zone h3 {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .zone p {
+        font-size: 7px;
+    }
+    .modal-content {
+        max-width: 95%;
+        padding: 20px;
+    }
+    .hud {
+        font-size: 8px;
+        padding: 10px;
+    }
+}
