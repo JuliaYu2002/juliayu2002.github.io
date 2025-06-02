@@ -4,10 +4,22 @@ const gameContainer = document.querySelector('.game-container');
 const zones = document.querySelectorAll('.zone');
 const modals = document.querySelectorAll('.modal');
 const closeButtons = document.querySelectorAll('.close');
+const hud = document.querySelector('.hud');
 
-let playerPos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+// Initialize with default position
+let playerPos = { x: 0, y: 20 };
 let keys = {};
 let currentHoveredZone = null;
+
+// Function to set initial player position
+function setInitialPlayerPosition() {
+    const hudRect = hud.getBoundingClientRect();
+    const playerHeight = 40; // Player height from CSS
+    playerPos.x = hudRect.right + 80; // Position player 80px to the right of HUD
+    playerPos.y = hudRect.top + (hudRect.height - playerHeight) / 2; // Center vertically with HUD
+    player.style.left = playerPos.x + 'px';
+    player.style.top = playerPos.y + 'px';
+}
 
 // Initialize player position
 player.style.left = playerPos.x + 'px';
@@ -209,6 +221,7 @@ document.addEventListener('keydown', (e) => {
 // Initialize everything when page loads
 document.addEventListener('DOMContentLoaded', () => {
     createStars();
+    setInitialPlayerPosition();
     gameLoop(); // Start the game loop
 });
 
