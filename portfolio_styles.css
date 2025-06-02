@@ -312,13 +312,16 @@ body {
 
 @media (max-width: 768px) {
     .zone {
-        width: 150px;
+        width: 200px;
         height: 120px;
         padding: 15px;
     }
     .zone h3 {
-        font-size: 12px;
+        font-size: 10px;
         margin-bottom: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     .zone p {
         font-size: 7px;

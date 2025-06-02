@@ -15,7 +15,7 @@ let currentHoveredZone = null;
 function setInitialPlayerPosition() {
     const hudRect = hud.getBoundingClientRect();
     const playerHeight = 40; // Player height from CSS
-    playerPos.x = hudRect.right + 80; // Position player 80px to the right of HUD
+    playerPos.x = hudRect.right + 10; // Position player 10px to the right of HUD
     playerPos.y = hudRect.top + (hudRect.height - playerHeight) / 2; // Center vertically with HUD
     player.style.left = playerPos.x + 'px';
     player.style.top = playerPos.y + 'px';
