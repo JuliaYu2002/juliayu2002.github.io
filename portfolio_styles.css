@@ -334,4 +334,30 @@ body {
         font-size: 8px;
         padding: 10px;
     }
+    /* Add mobile-specific skill grid styles */
+    .skill-grid {
+        grid-template-columns: 1fr 1fr;
+        /* Force 2 columns on mobile */
+        gap: 10px;
+        /* Reduce gap for mobile */
+    }
+    .skill-item {
+        width: 100%;
+        /* Make items fill their grid cell */
+        min-width: 0;
+        /* Allow items to shrink below their content size */
+        padding: 10px;
+        /* Reduce padding for mobile */
+    }
+    .skill-item h4 {
+        font-size: 8px;
+        /* Smaller font size for headers */
+        margin-bottom: 5px;
+    }
+    .skill-item p {
+        font-size: 7px;
+        /* Smaller font size for content */
+        word-break: break-word;
+        /* Allow words to break if needed */
+    }
 }
