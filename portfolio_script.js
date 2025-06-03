@@ -7,7 +7,7 @@ const closeButtons = document.querySelectorAll('.close');
 const hud = document.querySelector('.hud');
 
 // Initialize with default position
-let playerPos = { x: 0, y: 20 };
+let playerPos = { x: 0, y: 0 };
 let keys = {};
 let currentHoveredZone = null;
 
@@ -20,10 +20,6 @@ function setInitialPlayerPosition() {
     player.style.left = playerPos.x + 'px';
     player.style.top = playerPos.y + 'px';
 }
-
-// Initialize player position
-player.style.left = playerPos.x + 'px';
-player.style.top = playerPos.y + 'px';
 
 // Create stars
 function createStars() {
@@ -75,9 +71,11 @@ function movePlayer() {
     player.style.top = playerPos.y + 'px';
 }
 
-// Game loop - this was missing!
+// Game loop
 function gameLoop() {
     movePlayer();
+    // Check for active zone during each frame
+    const activeZone = getActiveZone();
     requestAnimationFrame(gameLoop);
 }
 
@@ -130,15 +128,24 @@ function getActiveZone() {
         y: playerRect.top + playerRect.height / 2
     };
 
+    // Remove any previous active indicators
+    zones.forEach(z => z.style.boxShadow = '');
+
     for (const zone of zones) {
         const zoneRect = zone.getBoundingClientRect();
-        const distance = Math.sqrt(
-            Math.pow((playerCenter.x - (zoneRect.left + zoneRect.width / 2)), 2) +
-            Math.pow((playerCenter.y - (zoneRect.top + zoneRect.height / 2)), 2)
-        );
 
-        // If player is within 100 pixels of zone center
-        if (distance < 100) {
+        // Define interaction margin (reduced from 150px to 15px for more precise interaction)
+        const margin = 15;
+
+        // Check if player is within interaction range of the zone
+        const isNearZone =
+            playerCenter.x >= (zoneRect.left - margin) &&
+            playerCenter.x <= (zoneRect.right + margin) &&
+            playerCenter.y >= (zoneRect.top - margin) &&
+            playerCenter.y <= (zoneRect.bottom + margin);
+
+        if (isNearZone) {
+            zone.style.boxShadow = '0 0 50px rgba(255, 255, 255, 0.5)';
             return zone;
         }
     }
@@ -169,7 +176,10 @@ function openModal(zone) {
 zones.forEach(zone => {
     // Click event
     zone.addEventListener('click', () => {
-        openModal(zone);
+        const activeZone = getActiveZone();
+        if (activeZone === zone) { // Only open if this is the active zone
+            openModal(zone);
+        }
     });
 });
 
@@ -209,7 +219,7 @@ modals.forEach(modal => {
     });
 });
 
-// Close modal with Escape key - this was incomplete!
+// Close modal with Escape key
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         modals.forEach(modal => {
@@ -218,8 +228,8 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Initialize everything when page loads
-document.addEventListener('DOMContentLoaded', () => {
+// Replace with window.onload
+window.addEventListener('load', () => {
     createStars();
     setInitialPlayerPosition();
     gameLoop(); // Start the game loop
