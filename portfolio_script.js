@@ -174,16 +174,13 @@ function openModal(zone) {
 
 // Make zones interactive
 zones.forEach(zone => {
-    // Click event
+    // Click event - now works independently of player position
     zone.addEventListener('click', () => {
-        const activeZone = getActiveZone();
-        if (activeZone === zone) { // Only open if this is the active zone
-            openModal(zone);
-        }
+        openModal(zone);
     });
 });
 
-// Global keyboard event listener
+// Global keyboard event listener - for Space/Enter when near zones
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault(); // Prevent scrolling on space
