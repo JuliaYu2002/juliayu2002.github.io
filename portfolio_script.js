@@ -15,8 +15,18 @@ let currentHoveredZone = null;
 function setInitialPlayerPosition() {
     const hudRect = hud.getBoundingClientRect();
     const playerHeight = 40; // Player height from CSS
-    playerPos.x = hudRect.right + 10; // Position player 10px to the right of HUD
-    playerPos.y = hudRect.top + (hudRect.height - playerHeight) / 2; // Center vertically with HUD
+
+    // Check if we're in landscape mode
+    if (window.innerWidth > window.innerHeight) {
+        // In landscape, position player to the right of HUD, vertically centered with it
+        playerPos.x = hudRect.right + 10;
+        playerPos.y = hudRect.top + (hudRect.height - playerHeight) / 2;
+    } else {
+        // In portrait, position player below HUD, horizontally centered with it
+        playerPos.x = hudRect.left + (hudRect.width - playerHeight) / 2;
+        playerPos.y = hudRect.bottom + 10;
+    }
+
     player.style.left = playerPos.x + 'px';
     player.style.top = playerPos.y + 'px';
 }
@@ -232,7 +242,7 @@ window.addEventListener('load', () => {
     gameLoop(); // Start the game loop
 });
 
-// Handle window resize
+// Handle window resize and orientation change
 window.addEventListener('resize', () => {
     const bounds = {
         left: 0,
@@ -241,10 +251,30 @@ window.addEventListener('resize', () => {
         bottom: window.innerHeight - 40
     };
 
-    // Keep player within new bounds
-    playerPos.x = Math.min(bounds.right, Math.max(bounds.left, playerPos.x));
-    playerPos.y = Math.min(bounds.bottom, Math.max(bounds.top, playerPos.y));
+    // Reset player position on orientation change
+    if ((window.innerWidth > window.innerHeight) !== (prevWindowWidth > prevWindowHeight)) {
+        setInitialPlayerPosition();
+    } else {
+        // Keep player within new bounds
+        playerPos.x = Math.min(bounds.right, Math.max(bounds.left, playerPos.x));
+        playerPos.y = Math.min(bounds.bottom, Math.max(bounds.top, playerPos.y));
+        player.style.left = playerPos.x + 'px';
+        player.style.top = playerPos.y + 'px';
+    }
 
-    player.style.left = playerPos.x + 'px';
-    player.style.top = playerPos.y + 'px';
+    // Store current dimensions for next comparison
+    prevWindowWidth = window.innerWidth;
+    prevWindowHeight = window.innerHeight;
+});
+
+// Add variables for tracking window dimensions
+let prevWindowWidth = window.innerWidth;
+let prevWindowHeight = window.innerHeight;
+
+// Add specific orientation change handler
+window.addEventListener('orientationchange', () => {
+    // Wait for the orientation change to complete
+    setTimeout(() => {
+        setInitialPlayerPosition();
+    }, 100);
 });

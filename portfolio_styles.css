@@ -11,7 +11,6 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     cursor: crosshair;
-    /* Changed from transparent to visible cursor */
 }
 
 .game-container {
@@ -92,7 +91,6 @@ body {
 
 .about-zone:hover {
     transform: translate(-50%, -50%);
-    /* Keep it centered, no scaling */
     box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
 }
 
@@ -250,13 +248,11 @@ body {
 }
 
 .project-card a {
-    /* text-decoration: none; */
     color: inherit;
 }
 
 .project-card:hover {
     background: rgba(80, 227, 194, 0.2);
-    /* transform: translateX(10px); */
 }
 
 .hud {
@@ -312,52 +308,186 @@ body {
 
 @media (max-width: 768px) {
     .zone {
-        width: 200px;
-        height: 120px;
-        padding: 15px;
+        width: 160px;
+        height: 100px;
+        padding: 10px;
     }
     .zone h3 {
-        font-size: 10px;
-        margin-bottom: 10px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        font-size: 8px;
+        margin-bottom: 8px;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
     }
     .zone p {
-        font-size: 7px;
+        font-size: 6px;
+        line-height: 1.2;
+    }
+    .skills-zone {
+        top: 25%;
+        left: 8%;
+    }
+    .projects-zone {
+        top: 25%;
+        right: 8%;
+    }
+    .experience-zone {
+        bottom: 25%;
+        left: 8%;
+    }
+    .contact-zone {
+        bottom: 25%;
+        right: 8%;
+    }
+    @media (max-width: 480px) {
+        .zone {
+            width: 140px;
+            height: 90px;
+        }
+        .about-zone {
+            width: 160px;
+            height: 100px;
+        }
+        .skills-zone {
+            top: 28%;
+            left: 5%;
+        }
+        .projects-zone {
+            top: 28%;
+            right: 5%;
+        }
+        .experience-zone {
+            bottom: 28%;
+            left: 5%;
+        }
+        .contact-zone {
+            bottom: 28%;
+            right: 5%;
+        }
     }
     .modal-content {
         max-width: 95%;
-        padding: 20px;
+        padding: 15px;
     }
     .hud {
         font-size: 8px;
-        padding: 10px;
+        padding: 8px;
     }
-    /* Add mobile-specific skill grid styles */
+    .instructions {
+        font-size: 8px;
+        padding: 8px;
+        max-width: 90%;
+        white-space: normal;
+    }
+}
+
+
+/* Landscape orientation styles */
+
+@media (max-height: 480px) and (orientation: landscape) {
+    .zone {
+        width: 140px;
+        height: 80px;
+        padding: 8px;
+    }
+    .zone h3 {
+        font-size: 7px;
+        margin-bottom: 4px;
+    }
+    .zone p {
+        font-size: 5px;
+        line-height: 1.2;
+    }
+    .skills-zone {
+        top: 50%;
+        left: 5%;
+        transform: translateY(-130%);
+    }
+    .projects-zone {
+        top: 50%;
+        right: 5%;
+        transform: translateY(-130%);
+    }
+    .experience-zone {
+        top: 50%;
+        left: 5%;
+        transform: translateY(30%);
+    }
+    .contact-zone {
+        top: 50%;
+        right: 5%;
+        transform: translateY(30%);
+    }
+    .about-zone {
+        width: 160px;
+        height: 90px;
+    }
+    .hud {
+        font-size: 7px;
+        padding: 6px;
+        max-width: 120px;
+    }
+    .instructions {
+        font-size: 7px;
+        padding: 6px;
+        max-width: 80%;
+        bottom: 10px;
+    }
+    .modal-content {
+        max-height: 90vh;
+        max-width: 90%;
+        padding: 12px;
+    }
+    .modal h2 {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .modal p,
+    .modal li {
+        font-size: 8px;
+        margin-bottom: 8px;
+    }
     .skill-grid {
-        grid-template-columns: 1fr 1fr;
-        /* Force 2 columns on mobile */
-        gap: 10px;
-        /* Reduce gap for mobile */
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
     }
     .skill-item {
-        width: 100%;
-        /* Make items fill their grid cell */
-        min-width: 0;
-        /* Allow items to shrink below their content size */
-        padding: 10px;
-        /* Reduce padding for mobile */
+        padding: 8px;
     }
     .skill-item h4 {
-        font-size: 8px;
-        /* Smaller font size for headers */
-        margin-bottom: 5px;
+        font-size: 7px;
+        margin-bottom: 4px;
     }
     .skill-item p {
-        font-size: 7px;
-        /* Smaller font size for content */
-        word-break: break-word;
-        /* Allow words to break if needed */
+        font-size: 6px;
+    }
+}
+
+
+/* Additional adjustments for wider landscape screens */
+
+@media (min-width: 481px) and (max-height: 480px) and (orientation: landscape) {
+    .zone {
+        width: 160px;
+        height: 90px;
+    }
+    .skills-zone {
+        left: 8%;
+    }
+    .projects-zone {
+        right: 8%;
+    }
+    .experience-zone {
+        left: 8%;
+    }
+    .contact-zone {
+        right: 8%;
+    }
+    .about-zone {
+        width: 180px;
+        height: 100px;
+    }
+    .skill-grid {
+        grid-template-columns: repeat(5, 1fr);
     }
 }
